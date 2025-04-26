@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>조건</title>
+  <style>
+    input{
+      box-sizing: border-box;
+      padding: 2px 4px;
+      outline: none;
+    }
+    .정답{
+      border: 2px solid yellowgreen;
+    }
+    .오답{
+      border: 2px solid orangered;
+    }
+  </style>
+</head>
+<body>
+  <h1>퀴즈</h1>
+  <form onsubmit=제출함수(event)>
+    <label for="퀴즈1"> 7+5 </label>
+    <input type="number" id="퀴즈1"/>
+    <br/><br/>
+    <label for="퀴즈2"> 2*8 </label>
+    <input type="number" id="퀴즈2"/>
+    <br/><br/>
+    <label for="퀴즈3"> 15/5 </label>
+    <input type="number" id="퀴즈3"/>
+    <br/><br/>
+    <input type="submit" value="제출"/>
+  </form>
+  <script>
+    function 제출함수(event){
+      document.getElementById("퀴즈1").classList.remove("정답")
+      document.getElementById("퀴즈1").classList.remove("오답")
+      document.getElementById("퀴즈2").classList.remove("정답")
+      document.getElementById("퀴즈2").classList.remove("오답")
+      document.getElementById("퀴즈3").classList.remove("정답")
+      document.getElementById("퀴즈3").classList.remove("오답")
+
+      event.preventDefault();
+      var 정답1 = document.getElementById("퀴즈1").value
+      var 정답2 = document.getElementById("퀴즈2").value
+      var 정답3 = document.getElementById("퀴즈3").value
+
+      if(정답1==="12"){
+        document.getElementById("퀴즈1").classList.add("정답")
+      }
+      else{
+        document.getElementById("퀴즈1").classList.add("오답")
+      }
+      
+      if(정답2==="16"){
+        document.getElementById("퀴즈2").classList.add("정답")
+      }
+      else{
+        document.getElementById("퀴즈2").classList.add("오답")
+      }
+
+      if(정답3==="3"){
+        document.getElementById("퀴즈3").classList.add("정답")
+      }
+      else{
+        document.getElementById("퀴즈3").classList.add("오답")
+      }
+    }
+  </script>
+</body>
+</html>

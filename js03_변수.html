@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="my_number"> </h1>
+  <h1 id="my_string"> </h1>
+  
+
+  <script>
+    var 숫자 = 0
+    var 글자 = "안녕하세요";
+
+    document.getElementById("my_number").innerHTML=숫자;
+    document.getElementById("my_string").innerHTML=글자;
+    
+
+
+    document.getElementById("my_number").addEventListener("click", function(){
+      숫자 = 숫자 + 1;
+      document.getElementById("my_number").innerHTML=숫자;
+    })
+    document.getElementById("my_number").addEventListener("contextmenu", function(){
+      숫자 = 숫자 - 1;
+      document.getElementById("my_number").innerHTML=숫자;
+    })
+
+    document.getElementById("my_string").addEventListener("click", function(){
+      글자 = 글자 + "ㅋ";
+      document.getElementById("my_string").innerHTML=글자;
+    })
+
+  </script>
+</body>
+</html>

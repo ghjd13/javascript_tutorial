@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .hide{
+      transform: translateX(-100%);
+      height: 0;
+    }
+    .highlight{
+      text-decoration: underline;
+      font-size: 32pt;
+      color: orangered
+    }
+  </style>
+</head>
+<body>
+  <h1 id="my_id" onmouseover=강조효과() onmouseleave=강조효과해제()>열고닫기</h1>
+  <button id = "toggle_btn" onclick=숨겼다보였다()>토글버튼</button>
+
+  <script>
+    function 숨겼다보였다(){
+      document.getElementById("my_id").
+      classList.toggle("hide");
+    }
+    function 강조효과(){
+      document.getElementById("my_id").
+      classList.add("highlight");
+    }
+    function 강조효과해제(){
+      document.getElementById("my_id").
+      classList.remove("highlight");
+    }
+  </script>
+</body>
+</html>

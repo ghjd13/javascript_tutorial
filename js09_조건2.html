@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .hide{
+      display: none;
+    }
+    .show{
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <select id="type">
+    <option>빵</option>
+    <option>커피</option>
+    <option>차</option>
+  </select>
+  <br/>
+
+  <select id = "coffee">
+    <option>1잔</option>
+    <option>2잔</option>
+    <option>3잔</option>
+  </select>
+
+  <script>
+    document.getElementById("type").addEventListener("input",function(){
+      var 선택값 = event.target.value;
+      선택값 === "커피"?
+      (document.getElementById("coffee").classList.add("show"),
+      document.getElementById("coffee").classList.remove('hide')
+      ): 
+      document.getElementById("coffee").classList.remove('show'),
+      document.getElementById("coffee").classList.add('hide')
+    })
+  </script>
+</body>
+</html>

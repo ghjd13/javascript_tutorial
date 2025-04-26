@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>(자료형)</title>
+</head>
+<body>
+  <h1 id="number"></h1> 
+  <h1 id="string"></h1> 
+  <button id="더하기">더하기</button>
+  <button id="빼기">빼기</button>
+  <button id="곱하기">곱하기</button>
+  <button id="나누기">나누기</button>
+  <button id="나머지 구하기">나머지 구하기</button>
+  <button id="초기화">초기화</button>
+
+  <script>
+    var 숫자 = 0
+    document.getElementById("number").innerHTML = 숫자
+
+    // 더하기 버튼
+    document.getElementById("더하기").addEventListener("click", function() {
+      숫자 = 숫자 + 1;
+      document.getElementById("number").innerHTML = 숫자;
+    });
+
+    // 빼기 버튼
+    document.getElementById("빼기").addEventListener("click", function() {
+      숫자 = 숫자 - 1;
+      document.getElementById("number").innerHTML = 숫자;
+    });
+
+    // 곱하기 버튼
+    document.getElementById("곱하기").addEventListener("click", function() {
+      숫자 = 숫자 * 2;
+      document.getElementById("number").innerHTML = 숫자;
+    });
+
+    // 나누기 버튼
+    document.getElementById("나누기").addEventListener("click", function() {
+      숫자 = 숫자 / 2;
+      document.getElementById("number").innerHTML = 숫자;
+    });
+
+    // 나머지 구하기 버튼
+    document.getElementById("나머지 구하기").addEventListener("click", function() {
+      숫자 = 숫자 % 2;
+      document.getElementById("number").innerHTML = 숫자;
+    });
+
+    // 초기화 버튼
+    document.getElementById("초기화").addEventListener("click", function() {
+      숫자 = 0;
+      document.getElementById("number").innerHTML = 숫자;
+    });
+
+    var 문자열;
+  </script>
+</body>
+</html>
