@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box"></div>
+
+  <script>
+    let p태그추가 = document.createElement("p");
+    p태그추가.innerHTML = "반갑습니다"
+    document.getElementById("box").appendChild(p태그추가);
+    let html코드 = `<p>안녕하세요</p>`
+    document.getElementById('box').innerHTML += html코드;
+
+    let 객체 = {
+      이름 : "김땡땡",
+      나이 : 17,
+    }
+    let 객체출력 = `<h1>${객체.이름}</h1>`
+    document.getElementById('box').innerHTML += 객체출력;
+  </script>
+</body>
+</html>

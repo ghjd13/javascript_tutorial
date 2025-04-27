@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <pre id="box"></pre>
+
+  <script>
+    let 상품 = [
+    {이름:"연필", 가격:1000},
+    {이름:"샤프", 가격:2000},
+    {이름:"볼펜", 가격:1500},
+    ]
+
+    상품.map(function(item){
+      document.getElementById('box').innerHTML += item.이름 + " : " + item.가격 + "원\n";
+    })
+  </script>
+</body>
+</html>

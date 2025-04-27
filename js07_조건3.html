@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="hello"></h1>
+  <h1 id="sum"></h1>
+
+  <input id="text-input" placeholder="비밀번호를 입력하세요"/>
+  <button id="submit-btn" onclick=검사()>제출 버튼</button>
+  <h1 id="result"></h1>
+
+  <script>
+    //조건문 if(){}
+    function 검사(){
+      var value = document.getElementById("text-input").value
+      document.getElementById("result").innerHTML = (value === "1234" ? "정답":"오답")
+    }
+    function 함수(){
+
+    }
+    function 더하기함수(){
+      
+    }
+
+    더하기함수()
+
+    function 인사하기(이름){
+      document.getElementById("hello").innerHTML = "안녕하세요 "+이름+"입니다"
+    }
+    인사하기("John")
+
+    function 더하기(숫자1, 숫자2){
+      return 숫자1 + 숫자2
+    }
+    var 결과값 = 더하기(3, 4)
+    document.getElementById("sum").innerHTML = 결과값
+  </script>
+</body>
+</html>

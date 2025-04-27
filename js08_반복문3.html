@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .no-display{
+      display: none;
+    }
+    .showdisplay{
+      display: inline-block;
+    }
+    ul{
+      display: flex;
+      list-style: none;
+    }
+    ul li{
+      padding: 4px 12px;
+      border: 1px solid lightgray;
+    }
+    .tab-selected{
+      border-top: 2px solid orange;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <ul>
+      <li class="tab-class tab-selected">탭1</li>
+      <li class="tab-class">탭2</li>
+      <li class="tab-class">탭3</li>
+    </ul>
+    <p class="content">탭1의 내용</p>
+    <p class="content no-display">탭2의 내용</p>
+    <p class="content no-display">탭3의 내용</p>
+  </div>
+
+  <script>
+    var tabs = document.getElementsByClassName('tab-class');
+  var contents = document.getElementsByClassName('content');
+
+  for (let i = 0; i < tabs.length; i++) {  // 여기 let 사용
+    tabs[i].addEventListener("click", function() {
+      // 모든 탭 초기화
+      for (let j = 0; j < tabs.length; j++) {
+        tabs[j].classList.remove("tab-selected");
+        contents[j].classList.add('no-display');
+      }
+      // 클릭한 탭만 활성화
+      tabs[i].classList.add("tab-selected");
+      contents[i].classList.remove('no-display');
+    });
+  }
+  </script>
+</body>
+</html>
